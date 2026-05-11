@@ -1,0 +1,73 @@
+sites:
+  - name: BBC News
+    list_url: https://www.bbc.com/news
+    article_selector: 'a.gs-c-promo-heading'
+    title_selector: 'h1'
+    author_selector: '.ssrcss-1f7k4gh-Contributor' # approximate
+    date_selector: 'time'
+    content_selector: 'article'
+
+  - name: CNN
+    list_url: https://www.cnn.com/world
+    article_selector: 'h3.cd__headline a'
+    title_selector: 'h1'
+    author_selector: '.metadata__byline__author'
+    date_selector: 'meta[name="pubdate"]'
+    content_selector: '.l-container'
+
+  - name: Reuters
+    list_url: https://www.reuters.com
+    article_selector: 'article a'
+    title_selector: 'h1'
+    author_selector: '.Byline-bar__name'
+    date_selector: 'time'
+    content_selector: 'article'
+
+  - name: Al Jazeera
+    list_url: https://www.aljazeera.com
+    article_selector: 'a.u-clickable-card__link'
+    title_selector: 'h1'
+    author_selector: '.article-author'
+    date_selector: 'time'
+    content_selector: 'div.article-p-wrapper'
+
+  - name: Hespress
+    list_url: https://www.hespress.com
+    article_selector: 'h2.entry-title a'
+    title_selector: 'h1.entry-title'
+    author_selector: '.author vcard'
+    date_selector: 'time'
+    content_selector: 'div.entry-content'
+
+  - name: Akhbarona
+    list_url: https://akhbarona.com
+    article_selector: 'article a'
+    title_selector: 'h1'
+    author_selector: '.author'
+    date_selector: 'time'
+    content_selector: 'div.post-content'
+
+  - name: Lakom
+    list_url: https://lakom.com
+    article_selector: 'h2 a'
+    title_selector: 'h1'
+    author_selector: '.author'
+    date_selector: 'time'
+    content_selector: '.entry-content'
+
+  - name: Barlamane
+    list_url: https://barlamane.com
+    article_selector: 'h2.entry-title a'
+    title_selector: 'h1.entry-title'
+    author_selector: '.author'
+    date_selector: 'time'
+    content_selector: 'div.entry-content'
+
+minio:
+  endpoint: ${MINIO_ENDPOINT}
+  access_key: ${MINIO_ACCESS_KEY}
+  secret_key: ${MINIO_SECRET_KEY}
+  secure: ${MINIO_SECURE}
+
+options:
+  batch_interval_minutes: 60
